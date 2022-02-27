@@ -12,6 +12,8 @@ public class RemoveEmpresa {
 	
 	public void acao(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
+		System.out.println("Removendo empresa");
+		
 		String id = request.getParameter("id");
 		Integer idInt = Integer.valueOf(id);
 		

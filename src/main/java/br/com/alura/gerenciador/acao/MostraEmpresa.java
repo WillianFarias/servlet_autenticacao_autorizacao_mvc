@@ -14,6 +14,8 @@ public class MostraEmpresa {
 
 	public void acao(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		System.out.println("Editar empresa");
+		
 		Integer id = Integer.parseInt(request.getParameter("id"));
 		
 		Banco banco = new Banco();
