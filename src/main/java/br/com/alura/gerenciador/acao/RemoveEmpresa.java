@@ -1,7 +1,6 @@
 package br.com.alura.gerenciador.acao;
 
 import java.io.IOException;
-import java.net.HttpRetryException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +19,7 @@ public class RemoveEmpresa {
 		Banco banco = new Banco();
 		banco.removeEmpresa(idInt);
 		
-		response.sendRedirect("listaEmpresas");
+		response.sendRedirect("home?acao=ListaEmpresas");
 	}
 
 }
