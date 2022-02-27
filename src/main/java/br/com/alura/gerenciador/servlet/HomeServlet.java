@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.alura.gerenciador.acao.AlterarEmpresa;
 import br.com.alura.gerenciador.acao.ListaEmpresas;
 import br.com.alura.gerenciador.acao.MostraEmpresa;
+import br.com.alura.gerenciador.acao.NovaEmpresa;
 import br.com.alura.gerenciador.acao.RemoveEmpresa;
 
 @WebServlet("/home")
@@ -35,10 +36,17 @@ public class HomeServlet extends HttpServlet {
 			
 			MostraEmpresa acao = new MostraEmpresa();
 			acao.acao(request, response);
+			
 		} else if (parametroAcao.equals("AlteraEmpresa")) {
 			
 			AlterarEmpresa acao = new AlterarEmpresa();
 			acao.acao(request, response);
+			
+		} else if (parametroAcao.equals("NovaEmpresa")) {
+			
+			NovaEmpresa acao = new NovaEmpresa();
+			acao.acao(request, response);
+			
 		}
 	}
 }
