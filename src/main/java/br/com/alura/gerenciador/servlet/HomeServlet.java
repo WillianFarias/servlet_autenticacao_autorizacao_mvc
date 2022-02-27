@@ -21,6 +21,7 @@ public class HomeServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String parametroAcao = request.getParameter("acao");
+//		String parametroAcao = request.getRequestURI();
 		
 		if (parametroAcao.equals("ListaEmpresas")) {
 			
