@@ -13,7 +13,7 @@ import br.com.alura.gerenciador.modelo.Empresa;
 
 public class ListaEmpresas {
 	
-	public void acao(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String acao(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		System.out.println("Listando Empresas");
 		
@@ -22,8 +22,9 @@ public class ListaEmpresas {
 		
 		request.setAttribute("empresas", lista);
 		
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/empresasCadastradas.jsp");
-		requestDispatcher.forward(request, response);
+//		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/empresasCadastradas.jsp");
+//		requestDispatcher.forward(request, response);
+		return "forward:empresasCadastradas.jsp";
 	}
 
 }
