@@ -41,17 +41,17 @@ public class HomeServlet extends HttpServlet {
 		} else if (parametroAcao.equals("MostraEmpresa")) {
 			
 			MostraEmpresa acao = new MostraEmpresa();
-			acao.acao(request, response);
+			nome = acao.acao(request, response);
 			
 		} else if (parametroAcao.equals("AlteraEmpresa")) {
 			
 			AlterarEmpresa acao = new AlterarEmpresa();
-			acao.acao(request, response);
+			nome = acao.acao(request, response);
 			
 		} else if (parametroAcao.equals("NovaEmpresa")) {
 			
 			NovaEmpresa acao = new NovaEmpresa();
-			acao.acao(request, response);
+			nome = acao.acao(request, response);
 			
 		}
 		

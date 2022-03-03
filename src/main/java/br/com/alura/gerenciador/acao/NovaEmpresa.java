@@ -14,7 +14,7 @@ import br.com.alura.gerenciador.modelo.Empresa;
 
 public class NovaEmpresa {
 	
-	public void acao(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String acao(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		System.out.println("Cadastrando nova Empresa");
 		
@@ -39,7 +39,9 @@ public class NovaEmpresa {
 		banco.adiciona(empresa);
 		
 		request.setAttribute("nomeEmpresa", empresa.getNome());
-		response.sendRedirect("home?acao=ListaEmpresas");
+//		response.sendRedirect("home?acao=ListaEmpresas");
+		
+		return "redirect:home?acao=ListaEmpresas";
 	}
 
 }
