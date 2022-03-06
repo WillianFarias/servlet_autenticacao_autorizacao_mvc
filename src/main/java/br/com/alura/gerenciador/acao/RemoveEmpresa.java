@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.alura.gerenciador.modelo.Banco;
 
-public class RemoveEmpresa {
+public class RemoveEmpresa implements Acao {
 	
 	public String acao(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
@@ -22,5 +22,4 @@ public class RemoveEmpresa {
 //		response.sendRedirect("home?acao=ListaEmpresas");
 		return "redirect:home?acao=ListaEmpresas";
 	}
-
 }
