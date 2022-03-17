@@ -24,8 +24,9 @@ public class NovaEmpresa implements Acao {
 		empresa.setNome(nomeEmpresa);
 		
 		try {
-			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
-			Date dataAberturaDate = simpleDateFormat.parse(dataAbertura);
+//			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+//			Date dataAberturaDate = simpleDateFormat.parse(dataAbertura);
+			Date dataAberturaDate = new Date(dataAbertura);
 			empresa.setDataAbertura(dataAberturaDate);
 		} catch (ParseException e) {
 			throw new ServletException("Não Foi Possível Definir a Data de Abertura! " + e);

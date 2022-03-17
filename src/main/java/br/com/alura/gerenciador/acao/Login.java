@@ -15,7 +15,7 @@ public class Login implements Acao {
 		
 		System.out.println("Logando " + login);
 		
-		return "redirect:entrada?acao=ListaEmpresas";
+		return "redirect:entrada?home=ListaEmpresas";
 	}
 
 }

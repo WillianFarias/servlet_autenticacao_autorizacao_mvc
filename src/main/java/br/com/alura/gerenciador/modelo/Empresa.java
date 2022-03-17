@@ -1,5 +1,6 @@
 package br.com.alura.gerenciador.modelo;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Empresa {
@@ -25,6 +26,9 @@ public class Empresa {
 	}
 
 	public Date getDataAbertura() {
+		if (dataCadastro == null) {
+			dataCadastro = Calendar.getInstance().getTime();
+		}
 		return dataCadastro;
 	}
 

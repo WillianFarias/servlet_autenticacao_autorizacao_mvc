@@ -1,6 +1,7 @@
 package br.com.alura.gerenciador.modelo;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class Banco {
@@ -13,10 +14,12 @@ public class Banco {
 		Empresa empresa = new Empresa();
 		empresa.setNome("Caeulum");
 		empresa.setId(sequenciaId++);
+		empresa.setDataAbertura(Calendar.getInstance().getTime());
 
 		Empresa empresa2 = new Empresa();
 		empresa2.setNome("Alura");
 		empresa2.setId(sequenciaId++);
+		empresa2.setDataAbertura(Calendar.getInstance().getTime());
 		
 		empresas.add(empresa);
 		empresas.add(empresa2);
