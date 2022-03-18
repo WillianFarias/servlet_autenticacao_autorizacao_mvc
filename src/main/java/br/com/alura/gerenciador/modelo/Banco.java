@@ -61,6 +61,17 @@ public class Banco {
 		}
 		return empresa;
 	}
+
+	public Usuario existeUsuario(String login, String senha) {
+//		Usuario usuario = usuarios.stream().filter(p -> p.ehIgual(login, senha));
+		Usuario usuarioRetorno = null;
+		for (Usuario usuario : usuarios) {
+			if(usuario.ehIgual(login, senha)) {
+				usuarioRetorno = usuario;
+			}
+		}
+		return usuarioRetorno;
+	}
 	
 //	public void removeEmpresa(Integer id) {
 //		Iterator<Empresa> iterator = empresas.iterator();
