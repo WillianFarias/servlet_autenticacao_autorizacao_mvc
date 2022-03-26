@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import br.com.alura.gerenciador.acao.Acao;
 
@@ -17,8 +18,17 @@ public class HomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 7527900789762475931L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		String parametroAcao = request.getParameter("acao");
+		Boolean acaoProtegida = !(parametroAcao.equals("Login") || parametroAcao.equals("LoginForm"));
+		
+		HttpSession sessao = request.getSession();
+		Boolean usuarioLogado = (sessao.getAttribute("usuarioLogado") == null);
+		
+		if (usuarioLogado && acaoProtegida) {
+			response.sendRedirect("redirec:home?acao=LoginForm");
+			return;
+		}
+
 		
 		String nomeDaClasse = "br.com.alura.gerenciador.acao." + parametroAcao;
 		String nome;

@@ -2,20 +2,19 @@
 <%@ page import="br.com.alura.gerenciador.modelo.Empresa" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%-- <c:url value="/gerenciador/removeEmpresa" var="removeEmpresa"/> --%>
-
-<%-- <% --%>
-<!-- //  	List<Empresa> lista = (List<Empresa>)request.getAttribute("empresas"); -->
-<%-- %> --%>
 
 <html>
 	<body>
+	
+		Usuario Logado: ${usuarioLogado.login}
+		<br>
+		<br>
+	
 		<c:if test="${ not empty empresa }">
 			Empresa ${ empresa } cadastrada com sucesso!
 		</c:if>
 		
 		<h2>Empresas Cadastradas</h2>
-<!-- 		<h3>Java Standard Taglib</h3> -->
 	
 			<c:if test="${not empty empresas }">
 				<ul>
@@ -33,18 +32,5 @@
 				Não Existem Empresas Cadastradas
 			</c:if>
 			
-<%--      <c:forEach var="i" begin="1" end="10" step="2"> --%>
-<%--        ${i} <br /> --%>
-<%--      </c:forEach> --%>
-	
-<!-- 		<ul> -->
-<%-- 		<% --%>
-<!-- // 			for (Empresa empresa : lista) { -->
-<%--  		%> --%>
-<%-- 			<li><%= empresa.getNome()%></li> --%>
-<%-- 		<% --%>
-<!-- //  			} -->
-<%-- 		%> --%>
-<!-- 		</ul> -->
 	<body>
 <html>
