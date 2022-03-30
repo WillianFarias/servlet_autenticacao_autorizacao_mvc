@@ -22,9 +22,9 @@ public class HomeServlet extends HttpServlet {
 		Boolean acaoProtegida = !(parametroAcao.equals("Login") || parametroAcao.equals("LoginForm"));
 		
 		HttpSession sessao = request.getSession();
-		Boolean usuarioLogado = (sessao.getAttribute("usuarioLogado") == null);
+		Boolean usuarioNaoLogado = (sessao.getAttribute("usuarioLogado") == null);
 		
-		if (usuarioLogado && acaoProtegida) {
+		if (usuarioNaoLogado && acaoProtegida) {
 			response.sendRedirect("redirec:home?acao=LoginForm");
 			return;
 		}

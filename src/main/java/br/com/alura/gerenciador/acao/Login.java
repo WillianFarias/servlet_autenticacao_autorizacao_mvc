@@ -26,9 +26,9 @@ public class Login implements Acao {
 		if(usuario != null) {
 			HttpSession sessao = request.getSession();
 			sessao.setAttribute("usuarioLogado", usuario);
-			retorno = "redirect:entrada?home=ListaEmpresas";
+			retorno = "redirect:home?acao=ListaEmpresas";
 		} else {
-			retorno = "redirect:entrada?home=LoginForm";
+			retorno = "redirect:home?acao=LoginForm";
 		}
 		
 		return retorno;

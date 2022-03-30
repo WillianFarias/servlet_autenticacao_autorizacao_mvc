@@ -5,7 +5,11 @@
 
 <html>
 	<body>
-	
+		
+		<a href="home?acao=Logout">Sair</a>
+		<br>
+		<br>
+		
 		Usuario Logado: ${usuarioLogado.login}
 		<br>
 		<br>
