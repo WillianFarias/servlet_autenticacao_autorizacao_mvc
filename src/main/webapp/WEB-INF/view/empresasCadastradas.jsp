@@ -6,9 +6,7 @@
 <html>
 	<body>
 		
-		<a href="home?acao=Logout">Sair</a>
-		<br>
-		<br>
+		<c:import url="logout-parcial.jsp" />
 		
 		Usuario Logado: ${usuarioLogado.login}
 		<br>

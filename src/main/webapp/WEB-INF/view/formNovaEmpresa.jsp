@@ -15,8 +15,6 @@
 		Nome: <input type="text" name="nome" />
 		Data: <input type="text" name="dataAbertura" />
 		
-<!-- 	<input type="hidden" name="acao" value="NovaEmpresa" /> -->
-		
 		<input type="submit">
 	</form>
 </body>

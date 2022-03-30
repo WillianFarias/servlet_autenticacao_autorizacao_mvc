@@ -12,6 +12,8 @@
 <body>
 	<form action="${linkEditarEmpresa}" method="post">
 	
+		<c:import url="logout-parcial.jsp" />
+	
 		Nome: <input type="text" name="nome" value="${ empresa.nome }"/>
 		Data: <input type="text" name="dataAbertura" value="<fmt:formatDate value="${ empresa.dataAbertura }" pattern="dd/MM/yyyy"/>" />
 		<input type="hidden" name="id" value="${ empresa.id }" />
