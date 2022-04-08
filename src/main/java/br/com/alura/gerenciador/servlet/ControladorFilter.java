@@ -26,7 +26,6 @@ public class ControladorFilter implements Filter {
 		HttpServletResponse response = (HttpServletResponse) servletResponse;
 		
 		String parametroAcao = request.getParameter("acao");
-		
 		String nomeDaClasse = "br.com.alura.gerenciador.acao." + parametroAcao;
 		String nome;
 		

@@ -15,11 +15,6 @@ public class ListaEmpresas implements Acao {
 	
 	public String acao(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		HttpSession sessao = request.getSession();
-//		if (sessao.getAttribute("usuarioLogado") == null) {
-//			return "redirec:home?acao=LoginForm";
-//		}
-		
 		System.out.println("Listando Empresas");
 		
 		Banco banco = new Banco();
@@ -27,8 +22,6 @@ public class ListaEmpresas implements Acao {
 		
 		request.setAttribute("empresas", lista);
 		
-//		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/empresasCadastradas.jsp");
-//		requestDispatcher.forward(request, response);
 		return "forward:empresasCadastradas.jsp";
 	}
 

@@ -28,7 +28,7 @@
   	<filter-class>br.com.alura.gerenciador.servlet.AutorizacaoFilter</filter-class>
   </filter>
   <filter-mapping>
-  	<filter-name>CF</filter-name>
+  	<filter-name>AF</filter-name>
   	<url-pattern>/home</url-pattern>
   </filter-mapping>
   
