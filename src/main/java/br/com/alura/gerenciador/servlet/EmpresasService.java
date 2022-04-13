@@ -23,16 +23,16 @@ public class EmpresasService extends HttpServlet {
 	
 		List<Empresa> empresas = new Banco().getEmpresas();
 		
-		String valor = request.getHeader("accept");
+		String valor = request.getHeader("Accept");
 		
-		if (valor.endsWith("xml")) {
+		if (valor.contains("xml")) {
 			XStream xstream = new XStream();
 			xstream.alias("empresa", Empresa.class);
 			String xml = xstream.toXML(empresas);
 			
 			response.setContentType("application/xml");
 			response.getWriter().print(xml);
-		} else if (valor.endsWith("json" )) {
+		} else if (valor.contains("json" )) {
 			Gson gson = new Gson();
 			String json = gson.toJson(empresas);
 			
